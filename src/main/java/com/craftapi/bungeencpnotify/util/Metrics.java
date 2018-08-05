@@ -335,7 +335,7 @@ public class Metrics {
     private int getOnlinePlayers() {
         try {
             Method onlinePlayerMethod = Server.class.getMethod("getOnlinePlayers");
-            if(onlinePlayerMethod.getReturnType().equals(Collection.class)) {
+            if(Collection.class.isAssignableFrom(onlinePlayerMethod.getReturnType())) {
                 return ((Collection<?>)onlinePlayerMethod.invoke(Bukkit.getServer())).size();
             } else {
                 return ((Player[])onlinePlayerMethod.invoke(Bukkit.getServer())).length;
