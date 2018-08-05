@@ -1,5 +1,6 @@
 name: BungeeNCPNotify
 version: 1.0
+api-version: 1.13
 description: NoCheatPlus Notifications for BungeeCord (Bukkit/Spigot Plugin)
 authors: [Krymonota, CraftAPI]
 website: http://craftapi.com
