@@ -38,14 +38,16 @@ public class ConfigurationManager {
 	 * {@link #getObject(String)}
 	 */
 	public int getInt(String key) {
-		return (int) this.getObject(key);
+		Object value = this.getObject(key);
+		return value == null ? 0 : (int) value;
 	}
 	
 	/**
 	 * {@link #getObject(String)}
 	 */
 	public boolean getBoolean(String key) {
-		return (boolean) this.getObject(key);
+		Object value = this.getObject(key);
+		return value == null ? false : (boolean) value;
 	}
 	
 }
